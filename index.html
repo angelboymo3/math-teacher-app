@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="한 학기 수학 수업을 차분히 정리하는 교사의 수업 노트, 풀이과정.">
+  <title>풀이과정 · 수학 수업 노트</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <div class="workspace">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">∴</span><div><h1>풀이과정</h1><p>수학 수업 노트</p></div></div>
+      <div class="backup-tools"><div class="button-row"><button disabled aria-describedby="backup-note">JSON 내보내기</button><button disabled aria-describedby="backup-note">JSON 가져오기</button></div><p id="backup-note">저장·백업 기능은 다음 단계에서 제공됩니다.</p></div>
+    </header>
+    <div class="notebook-heading"><p>한 학기의 수업을, 한 권의 노트에.</p><span>교사용 수업 공간</span></div>
+    <nav aria-label="수업 관리 메뉴"><div class="tabs" role="tablist" aria-label="수업 관리" aria-orientation="horizontal">
+      <a id="tab-assessment-plan" role="tab" aria-selected="true" aria-controls="assessment-plan" href="#assessment-plan">평가 계획</a>
+      <a id="tab-performance" role="tab" aria-selected="false" aria-controls="performance" tabindex="-1" href="#performance">수행평가</a>
+      <a id="tab-materials" role="tab" aria-selected="false" aria-controls="materials" tabindex="-1" href="#materials">수업자료</a>
+      <a id="tab-exams" role="tab" aria-selected="false" aria-controls="exams" tabindex="-1" href="#exams">정기고사</a>
+      <a id="tab-records" role="tab" aria-selected="false" aria-controls="records" tabindex="-1" href="#records">세특 기록</a>
+    </div></nav>
+    <noscript><div class="notice">탭을 이동하려면 브라우저의 JavaScript를 켜 주세요. 현재는 평가 계획 안내만 볼 수 있습니다.</div></noscript>
+    <div id="app-error" class="notice error" role="alert" hidden>화면을 불러오지 못했습니다. 새로고침해 주세요.</div>
+    <main id="main" tabindex="-1">
+      <section id="assessment-plan" role="tabpanel" aria-labelledby="tab-assessment-plan" tabindex="0">
+        <div class="section-heading"><div><p class="eyebrow">학기의 밑그림</p><h2>평가 계획</h2><p>수업의 목표와 평가의 방향을 함께 정리하는 공간입니다.</p></div><span class="stage">첫 버전 · 준비 중</span></div>
+        <div class="empty-state"><span class="empty-symbol" aria-hidden="true">∅</span><h3>등록된 평가 계획이 없습니다.</h3><p>학기 평가 계획을 작성하는 기능은 다음 단계에서 제공합니다.</p><div class="empty-rule" aria-hidden="true"></div><span class="empty-caption">새 학기의 계획을 담을 자리</span></div>
+      </section>
+      <section id="performance" role="tabpanel" aria-labelledby="tab-performance" tabindex="0" hidden>
+        <div class="section-heading"><div><p class="eyebrow">배움의 과정</p><h2>수행평가</h2><p>학생의 사고 과정과 배움을 살펴보는 평가를 준비합니다.</p></div><span class="stage">첫 버전 · 준비 중</span></div>
+        <div class="empty-state"><span class="empty-symbol" aria-hidden="true">∅</span><h3>등록된 수행평가가 없습니다.</h3><p>과제와 평가 기준 관리 기능은 다음 단계에서 제공합니다.</p><div class="empty-rule" aria-hidden="true"></div><span class="empty-caption">배움의 과정을 담을 자리</span></div>
+      </section>
+      <section id="materials" role="tabpanel" aria-labelledby="tab-materials" tabindex="0" hidden>
+        <div class="section-heading"><div><p class="eyebrow">매일의 수업</p><h2>수업자료</h2><p>수업에 필요한 자료를 차곡차곡 모으는 공간입니다.</p></div><span class="stage">첫 버전 · 준비 중</span></div>
+        <div class="empty-state"><span class="empty-symbol" aria-hidden="true">∅</span><h3>등록된 수업자료가 없습니다.</h3><p>수업자료 정리 기능은 다음 단계에서 제공합니다.</p><div class="empty-rule" aria-hidden="true"></div><span class="empty-caption">수업의 아이디어를 담을 자리</span></div>
+      </section>
+      <section id="exams" role="tabpanel" aria-labelledby="tab-exams" tabindex="0" hidden>
+        <div class="section-heading"><div><p class="eyebrow">배움의 점검</p><h2>정기고사</h2><p>시험 범위와 문항의 구성을 정리하는 공간입니다.</p></div><span class="stage">첫 버전 · 준비 중</span></div>
+        <div class="empty-state"><span class="empty-symbol" aria-hidden="true">∅</span><h3>등록된 정기고사 계획이 없습니다.</h3><p>시험 범위와 문항 계획 관리 기능은 다음 단계에서 제공합니다.</p><div class="empty-rule" aria-hidden="true"></div><span class="empty-caption">평가의 기준을 담을 자리</span></div>
+      </section>
+      <section id="records" role="tabpanel" aria-labelledby="tab-records" tabindex="0" hidden>
+        <div class="section-heading"><div><p class="eyebrow">성장의 기록</p><h2>세특 기록</h2><p>수업에서 발견한 학생의 배움과 성장을 기록하는 공간입니다.</p></div><span class="stage">첫 버전 · 준비 중</span></div>
+        <div class="empty-state"><span class="empty-symbol" aria-hidden="true">∅</span><h3>작성된 세특 기록이 없습니다.</h3><p>관찰 내용과 기록 관리 기능은 다음 단계에서 제공합니다.</p><div class="empty-rule" aria-hidden="true"></div><span class="empty-caption">성장의 순간을 담을 자리</span></div>
+      </section>
+    </main>
+    <footer><p><span class="footer-mark" aria-hidden="true">∴</span> 결과만큼 소중한, 풀이과정.</p><p>첫 버전에서는 데이터를 입력하거나 저장하지 않습니다.</p></footer>
+  </div>
+</body>
+</html>
