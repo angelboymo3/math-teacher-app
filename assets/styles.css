@@ -22,7 +22,7 @@ button:disabled { color: #687368; background: #f0f3ec; cursor: not-allowed; }
 .notebook-heading span { font-size: .875rem; color: var(--muted); }
 nav { border-bottom: 1px solid #c4d2c6; }
 .tabs { display: flex; overflow-x: auto; scrollbar-width: thin; gap: 20px; }
-.tabs a { flex: 0 0 auto; text-align: center; text-decoration: none; padding: 15px 19px; border-bottom: 3px solid transparent; color: var(--muted); min-height: 52px; }
+.tabs a { flex: 0 0 auto; white-space: nowrap; text-align: center; text-decoration: none; font-size: 1.125rem; font-weight: 600; padding: 15px 19px; border-bottom: 5px solid transparent; color: var(--ink); min-height: 52px; }
 .tabs a:hover { color: var(--green); background: #eef3e9; }
 .tabs a[aria-selected="true"] { color: var(--green); border-color: var(--green); font-weight: 700; }
 .tabs a:focus-visible { outline-offset: -5px; }
