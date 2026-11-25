@@ -7,14 +7,29 @@
   <title>풀이과정 · 수학 수업 노트</title>
   <link rel="stylesheet" href="./assets/styles.css">
   <script defer src="./assets/app.js"></script>
+  <script defer src="./assets/storage.js"></script>
+  <script defer src="./assets/backup.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
   <div class="workspace">
     <header class="masthead">
       <div class="brand"><span class="brand-mark" aria-hidden="true">∴</span><div><h1>풀이과정</h1><p>수학 수업 노트</p></div></div>
-      <div class="backup-tools"><div class="button-row"><button disabled aria-describedby="backup-note">JSON 내보내기</button><button disabled aria-describedby="backup-note">JSON 가져오기</button></div><p id="backup-note">저장·백업 기능은 다음 단계에서 제공됩니다.</p></div>
+      <div class="backup-tools"><div class="button-row"><button id="export-backup" disabled aria-describedby="backup-note">JSON 내보내기</button><button id="import-backup" disabled aria-describedby="backup-note">JSON 가져오기</button></div><p id="backup-note">이 브라우저의 보관함을 파일로 저장하거나 복원합니다.</p><input id="backup-file" type="file" accept=".json,application/json" hidden></div>
     </header>
+    <div class="backup-feedback">
+      <p id="backup-status" role="status" aria-live="polite">저장 기능을 준비하고 있습니다. 안내가 바뀌지 않으면 JavaScript 설정을 확인하거나 새로고침해 주세요.</p>
+      <div id="backup-recovery" class="button-row" hidden>
+        <button id="reload-storage" type="button">저장 상태 다시 확인</button>
+        <button id="export-original" type="button">현재 저장 원본 보관</button>
+        <button id="reset-storage" type="button">빈 보관함으로 초기화</button>
+      </div>
+    </div>
+    <dialog id="restore-dialog" aria-labelledby="restore-title" aria-describedby="restore-summary">
+      <h2 id="restore-title">백업으로 교체할까요?</h2>
+      <p id="restore-summary"></p>
+      <div class="button-row"><button id="cancel-restore" type="button" autofocus>취소</button><button id="confirm-restore" type="button">전체 교체하고 저장</button></div>
+    </dialog>
     <div class="notebook-heading"><p>한 학기의 수업을, 한 권의 노트에.</p><span>교사용 수업 공간</span></div>
     <nav aria-label="수업 관리 메뉴"><div class="tabs" role="tablist" aria-label="수업 관리" aria-orientation="horizontal">
       <a id="tab-assessment-plan" role="tab" aria-selected="true" aria-controls="assessment-plan" href="#assessment-plan">평가 계획</a>
@@ -47,7 +62,7 @@
         <div class="empty-state"><span class="empty-symbol" aria-hidden="true">∅</span><h3>작성된 세특 기록이 없습니다.</h3><p>관찰 내용과 기록 관리 기능은 다음 단계에서 제공합니다.</p><div class="empty-rule" aria-hidden="true"></div><span class="empty-caption">성장의 순간을 담을 자리</span></div>
       </section>
     </main>
-    <footer><p><span class="footer-mark" aria-hidden="true">∴</span> 결과만큼 소중한, 풀이과정.</p><p>첫 버전에서는 데이터를 입력하거나 저장하지 않습니다.</p></footer>
+    <footer><p><span class="footer-mark" aria-hidden="true">∴</span> 결과만큼 소중한, 풀이과정.</p><p>현재는 빈 보관함의 저장·백업만 제공합니다.</p></footer>
   </div>
 </body>
 </html>
